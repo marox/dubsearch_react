@@ -98,17 +98,16 @@ function EmailForm()
 {
     const [successMessage, setSuccessMessage] = useState(null);
     const { register, handleSubmit, formState: { errors }} = useForm({mode: "onChange"});
-    const onSubmit = (data) => {
-        fetch(process.env.REACT_APP_SUBSCRIBE_URL, {
+
+    async function onSubmit(data){
+        const result = await fetch(process.env.REACT_APP_SUBSCRIBE_URL, {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
-        }).then(res => {
-            return res.json();
-        }).then(responseData => {
-            setSuccessMessage(responseData.message);
-            resetEmail();
         });
+        const responseData = await result.json();
+        setSuccessMessage(responseData.message);
+        resetEmail();
     }
 
     function resetEmail(){
