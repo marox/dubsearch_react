@@ -138,6 +138,14 @@ function MailTo(){
     )
 }
 
+function Insta(){
+    return(
+        <a href={process.env.REACT_APP_INSTA_LINK} target="blank">
+            <img src={insta} className="email_svg" style={{verticalAlign: 'bottom'}} /> instagram
+        </a>
+    )
+}
+
 function About({text}){
     const [show, setShow] = useState(false);
     function showMe(){
@@ -158,9 +166,7 @@ function About({text}){
                     <EmailForm />
                 </div>
                 <div className={'email'}>
-                    <a href="https://www.instagram.com/dubsearch/">
-                        <img src={insta} className="email_svg" style={{verticalAlign: 'bottom'}} /> instagram
-                    </a>
+                    <Insta />
                 </div>
                 <div className="clear" style={{margin:0}}></div>
             </div>
