@@ -129,6 +129,15 @@ function EmailForm()
     )
 }
 
+function MailTo(){
+    const mailToLink= 'mailto:'+ process.env.REACT_APP_EMAIL;
+    return(
+        <a href={mailToLink}>
+            <img src={contact} className="email_svg" style={{verticalAlign: 'bottom'}} /> contact
+        </a>
+    )
+}
+
 function About({text}){
     const [show, setShow] = useState(false);
     function showMe(){
@@ -143,9 +152,7 @@ function About({text}){
                     {text}
                 </div>
                 <div className={'email'}>
-                    <a href="mailto:dub@dubsearch.ch">
-                    <img src={contact} className="email_svg" style={{verticalAlign: 'bottom'}} /> contact
-                    </a>
+                    <MailTo />
                 </div>
                 <div className="subscribe">
                     <EmailForm />
