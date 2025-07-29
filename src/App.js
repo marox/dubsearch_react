@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import openImage from './assets/open_small.png';
 import closeImage from './assets/close_small.png';
 import insta from './assets/dubsearch_insta.svg';
-import contact from './assets/contact.png';
+import contact from './assets/contact.png'; e.target.setAttribute('src', openImage);
 import playIcon from './assets/play.png';
 import pauseIcon from './assets/pause.png';
 import nextIcon from './assets/next.png';
@@ -15,7 +15,7 @@ import sendIcon from './assets/send.png';
 function Swaper({onSwap, doOpen}){
     function swap(e){
         if(doOpen) {
-            e.target.setAttribute('src', openImage);
+
         }else{
             e.target.setAttribute('src', closeImage);
         }
@@ -245,7 +245,7 @@ export default function Radio(){
         setData(myData);
     }
 
-    function play(mix)
+    function    play(mix)
     {
         if(mix !== activeMix){
             switchMix(mix);

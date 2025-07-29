@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a6e2c665.css",
+    "main.js": "/static/js/main.41462c5d.js",
+    "static/media/SimplonMono-Regular-WebTrial.woff": "/static/media/SimplonMono-Regular-WebTrial.b075d2e51f16ac6fe5bc.woff",
+    "static/media/dubsearch_insta.svg": "/react/static/media/dubsearch_insta.809e9997bf2d234aae87989f916d1339.svg",
+    "index.html": "/index.html",
+    "main.a6e2c665.css.map": "/static/css/main.a6e2c665.css.map",
+    "main.41462c5d.js.map": "/static/js/main.41462c5d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6e2c665.css",
+    "static/js/main.41462c5d.js"
+  ]
+}
